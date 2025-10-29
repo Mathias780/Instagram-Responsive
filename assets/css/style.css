@@ -272,6 +272,9 @@
   .w-1\/3 {
     width: calc(1/3 * 100%);
   }
+  .w-1\/4 {
+    width: calc(1/4 * 100%);
+  }
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
@@ -542,6 +545,11 @@
   .\[border-image\:linear-gradient\(45deg\,\#f58529\,\#dd2a7b\,\#8134af\,\#515bd4\)_1\] {
     border-image: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4) 1;
   }
+  .sm\:w-1\/6 {
+    @media (width >= 40rem) {
+      width: calc(1/6 * 100%);
+    }
+  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
@@ -557,9 +565,24 @@
       width: 65%;
     }
   }
+  .md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
+    }
+  }
+  .md\:justify-start {
+    @media (width >= 48rem) {
+      justify-content: flex-start;
+    }
+  }
+  .md\:gap-2 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 2);
     }
   }
   .md\:gap-5 {
